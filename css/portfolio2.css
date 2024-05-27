@@ -1,0 +1,345 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgba(48, 48, 48, 0.8);
+  color: white;
+  padding: 10px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hero-content {
+  flex: 1;
+  /* Prend autant d'espace que possible */
+  align-items: center;
+}
+
+aside {
+  flex: 0 0 50%;
+  /* Largeur fixe pour l'aside */
+  padding: 20px;
+ 
+  text-align: center;
+  border-radius: 15px;
+}
+
+aside img {
+  max-width: 100%;
+  /* Assurez-vous que l'image ne dépasse pas la largeur du aside */
+  height: auto;
+  /* Maintient le ratio hauteur-largeur de l'image */
+  margin-top: 20px;
+  /* Marge supérieure pour espacement */
+  border-radius: 15px;
+}
+
+#hero-inverted {
+  background-color: #f4f4f4;
+  padding: 50px 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  /* Aligne les éléments verticalement au centre */
+}
+
+#hero-inverted aside {
+  flex: 1;
+  /* Prend autant d'espace que possible */
+  max-width: 50%;
+  /* Limite la largeur à 50% */
+  display: flex;
+  justify-content: center;
+  /* Centre le contenu à l'intérieur du aside */
+  place-content: center;
+}
+
+#hero-inverted aside img {
+  max-width: 100%;
+  /* Ajuste la largeur de l'image */
+  height: auto;
+  /* Ajuste la hauteur automatiquement */
+  display: block;
+  /* Empêche les marges blanches */
+}
+
+#hero-inverted .hero-content {
+  flex: 1;
+  /* Prend autant d'espace que possible */
+  place-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+
+
+
+#services,
+#projects,
+#contact {
+  padding: 20px;
+  background-color: #303030;
+  color: whitesmoke;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #2f4f4f;
+  /* background-color: ; */
+  color: whitesmoke;
+}
+
+.about-content {
+  flex: 1;
+  margin-right: 10px; /* Ajoute un espacement entre les éléments */
+}
+
+.about-button {
+  flex: 1;
+  text-align: right; /* Aligne le bouton à droite */
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cv-button:hover {
+  background-color: #555;
+}
+.service {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#projects {
+  padding: 20px;
+  text-align: center;
+}
+
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(9, 200px);
+  gap: 10px;
+  grid-template-areas:
+      "item1 item4 item2 item3 item3"
+      "item1 item4 item10 item3 item3"
+      "item1 item4 item10 item3 item3"
+      "item1 item9 item10 item7 item13"
+      "item1 item9 item10 item7 item13"
+      "item12 item6 item6 item7 item13"
+      "item12 item6 item6 item8 item13"
+      "item12 item6 item6 item8 item13"
+      "item11 item5 item5 item14 item14"
+      "item11 item5 item5 item14 item14";
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Grid areas */
+.item1 { grid-area: item1; }
+.item2 { grid-area: item2; }
+.item3 { grid-area: item3; }
+.item4 { grid-area: item4; }
+.item5 { grid-area: item5; }
+.item6 { grid-area: item6; }
+.item7 { grid-area: item7; }
+.item8 { grid-area: item8; }
+.item9 { grid-area: item9; }
+.item10 { grid-area: item10; }
+.item11 { grid-area: item11; }
+.item12 { grid-area: item12; }
+.item13 { grid-area: item13; }
+.item14 { grid-area: item14; }
+
+
+
+#video-player {
+  text-align: center;
+  padding: 20px;
+  background-color: #303030;
+  color: whitesmoke;
+}
+
+.video-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 1280px; /* Taille fixe pour le lecteur vidéo */
+  height: 720px; /* Taille fixe pour le lecteur vidéo */
+  background-color: black; /* Ajout d'un fond noir pour masquer les changements de taille */
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover; /* Assure que la vidéo couvre tout l'espace du lecteur sans changer de proportion */
+}
+
+.video-buttons {
+  margin-top: 10px;
+}
+
+.video-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #2f4f4f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.video-buttons button:hover {
+  background-color: #555;
+}
+
+#contact {
+  padding: 20px;
+  background-color: #303030;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.social-links {
+  text-align: right;
+  
+}
+
+.social-links a {
+  margin: 0 20px;
+  
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  
+}
+
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav ul li {
+    margin: 5px 0;
+  }
+
+  #about {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-content,
+  .about-button {
+    flex: 100%; /* Prend toute la largeur */
+    margin-right: 0;
+    margin-bottom: 10px; /* Espacement entre les éléments */
+    text-align: left; /* Alignement à gauche sur les petits écrans */
+  }
+
+  .about-button {
+    text-align: left; /* Réaligne le bouton à gauche sur les petits écrans */
+  }
+
+  .service,
+  .project {
+    margin: 10px 0;
+  }
+
+  #contact form input,
+  #contact form textarea {
+    width: 100%;
+  }
+}
